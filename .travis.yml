@@ -9,4 +9,4 @@ before_script:
 script:
     - echo "deploying"
 after_success:
-    - firebase deploy --pleasesleepwithme-c20ca --token $FIREBASE_TOKEN
+    - firebase deploy -- project pleasesleepwithme-c20ca --token $FIREBASE_TOKEN
