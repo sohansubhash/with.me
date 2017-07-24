@@ -8,5 +8,11 @@ before_script:
     - npm install -g firebase-tools
 script:
     - echo "deploying"
-after_success:
-    - firebase deploy --token $FIREBASE_TOKEN
+deploy:
+  provider: firebase
+  skip_cleanup: true
+  on:
+    branch: master
+    tags: true
+  token:
+    secure: WjNl38+e94ncNN2jyLftljPCGv3iN7LvuwOVJRyVJjxFwQSPuBh7uLc4epvZxGaE/SaNO3WMZomp70nnmM8nrgHk0t262iALeCzXTYltBZVQhJaXoSdsfm4nYD0Ch2GWNM2ThOe6ZGQMUWhVWZoLZNWMrkXVUHgkY0KLlojl7wYs4jUJ7lMn4RsgicaeoWCKlv4El3Wqx4O/BM4TbcEpAmhOwsLAEWFT/lbuBCYhgdh33vLsRERqx29DpiusX703Sz5jnyNp1JxMcdIhHrF/S7XykWHAY88+skaP3Hvmmbkj6qoSqX5HMdm1RGiTAUDKCmccvtFjM52TzzbycpjWj9uEndENGesxR1T/81VVEz4NIy3vuQfvFecL78CSGho9CjNhlrrFKJ4JEApPqOzGCCiIq4P4vLTiYS4qag+hex7tIu1udYFBrOqkRYwrkt4a+yKma66xjICPQ7ewX5740HRrx3cVMO7CV6/J8FZQH7txj/MEKLXzlX9iLik77ps/C2GaMl2FBekkcoU28YvvEQahiM3T9d9JzodGN7LRzDFtLC7mjAjknwM/OnCnIbpsiosBMSXWz9haf8q9GclOHzv52ovmjMKV59SXk88pbkEhbzBOWE57+oCt5xoopPz7YdTORErnS/y40hEazIYPkFOIX5C0xjZbCoSBWL1nDbc=
