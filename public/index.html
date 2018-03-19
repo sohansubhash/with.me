@@ -18,6 +18,43 @@
 <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Yeseva+One|Merriweather+Sans:300|Merriweather:400italic' rel='stylesheet' type='text/css'>
     <style media="screen">
+
+        #img.source-image {
+      max-width: 30px; 
+
+}
+
+    .photo {
+        grid-area: photo;
+        padding: 0.2em;
+      height: 30px; 
+    max-width: 30px; 
+    }
+
+
+.card{
+	height: auto;
+	background-image: jsh.jpg
+}
+
+    .wrapper {
+        display: grid;
+         grid-template-columns: 200px 200px;
+
+        grid-template-areas:
+               "photo  form";    }
+}
+.box {
+
+}
+
+
+#contact-form {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+
 body {
   font-family: "Helvetica Neue";
   font-size: 20px;
@@ -153,27 +190,35 @@ input {
 }
 .input-bar-button
 {    margin-left: 5px;
+  margin-right: 5px;
+
     padding: 0;
     height: auto;
     vertical-align: middle;
+    float: right;
 }
 .new-bar{
  background:  #F7F7F7;
+   border-radius: 5px;
 padding: 0.4em; }
  .new-input{
  background:  white;
   color: grey;
   border-radius: 5px;
-width: 83%
+width: available;
 
  }
  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #F7F7F7;
 }
+
+<-picture
 </style>
   </head>
   <body>
-<section>
+<div class="wrapper">
+  <div class="box photo"> <div class="card"> </div></div>
+<div class ="box section">
 <form action="https://jumprock.co/mail/josh9" method="post">
  <div class="from-them">
       <p>ayy lmao</p>
@@ -188,14 +233,14 @@ width: 83%
     </div>
   <div class="clear"></div>
     <div class="from-me">
- <input type="text"  class="bubble" name="name" minlength="3" placeholder="nombre?" required>    </div>
+ <input type="text"  class="bubble" name="name" minlength="3" placeholder="(name?)" required>    </div>
   <div class="clear"></div>
     <div class="from-them">
       <p>and yo numba</p>
     </div>
   <div class="clear"></div>
     <div class="from-me">
-          <input class="bubble" type="text" name="phone" placeholder="digits?">
+          <input class="bubble" type="text" name="phone" placeholder="(digits?)">
     </div>
   <div class="clear"></div>
     <div class="from-them">
@@ -207,7 +252,8 @@ width: 83%
                 <input  type= "submit" value="Send" class="input-bar-button"> </input>
            </div>
 </form>
-  </section>
+  </div>
+  </div>
   </body>
 </html>
 
